@@ -73,9 +73,9 @@ pub fn init_logger() {
     builder.format(move |buf, record| {
         writeln!(
             buf,
-            "{} [{}s, {}] - {}",
+            "{} [{}ms, {}] - {}",
             prefix_token(&record.level()),
-            start.elapsed().as_secs(),
+            start.elapsed().as_millis(),
             record.metadata().target(),
             level_text_color(&record.level(), &format!("{}", record.args()))
             .replace('\n', &format!("\n{} ", " | ".white().bold()))

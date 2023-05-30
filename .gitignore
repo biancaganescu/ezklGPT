@@ -8,6 +8,8 @@ data
 *.code
 *.key
 *.params
+*.json
+*.onnx
 *~
 \#*\#
 .DS_Store
@@ -33,3 +35,4 @@ var/
 *.egg
 .vscode/
 *.whl
+logs/

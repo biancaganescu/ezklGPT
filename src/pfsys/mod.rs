@@ -275,10 +275,10 @@ where
     let now = Instant::now();
     trace!("preparing VK");
     let vk = keygen_vk(params, &empty_circuit)?;
-    info!("VK took {}", now.elapsed().as_secs());
+    info!("VK took {}", now.elapsed().as_millis());
     let now = Instant::now();
     let pk = keygen_pk(params, vk, &empty_circuit)?;
-    info!("PK took {}", now.elapsed().as_secs());
+    info!("PK took {}", now.elapsed().as_millis());
     Ok(pk)
 }
 
