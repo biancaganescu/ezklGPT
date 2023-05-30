@@ -72,7 +72,7 @@ class CausalSelfAttention(nn.Module):
         # manual implementation of attention
         # q shape:(B, nh, T, hs), k transpose shape (B, nh, hs, T) -> (B, nh, T, T)
         att = (q @ k.transpose(-2, -1)) * (1.0 / math.sqrt(k.size(-1)))
-        att = att.masked_fill(self.bias[:, :, :T, :T] == 0, float(-10))
+        att = att.masked_fill(self.bias[:, :, :T, :T] == 0, float(-2047))
         att = F.softmax(att, dim=-1)
         att = self.attn_dropout(att)
         y = att @ v  # (B, nh, T, T) x (B, nh, T, hs) -> (B, nh, T, hs)
