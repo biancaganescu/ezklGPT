@@ -1221,9 +1221,7 @@ pub(crate) async fn prove(
         }
     };
 
-    if let Some(proof_path) = proof_path {
-        snark.save(&proof_path)?;
-    }
+    info!("proof took {}", now.elapsed().as_millis());
 
     Ok(snark)
 }
@@ -1605,12 +1603,7 @@ pub(crate) fn aggregate(
             check_mode,
         )?;
 
-        let elapsed = now.elapsed();
-        info!(
-            "Aggregation proof took {}.{}",
-            elapsed.as_secs(),
-            elapsed.subsec_millis()
-        );
+        info!("Aggregation proof took {}", now.elapsed().as_millis());
         snark.save(&proof_path)?;
     }
     #[cfg(not(target_arch = "wasm32"))]
@@ -1633,12 +1626,7 @@ pub(crate) fn verify(
     let vk = load_vk::<KZGCommitmentScheme<Bn256>, Fr, GraphCircuit>(vk_path, circuit_settings)?;
     let now = Instant::now();
     let result = verify_proof_circuit_kzg(params.verifier_params(), proof, &vk, strategy);
-    let elapsed = now.elapsed();
-    info!(
-        "verify took {}.{}",
-        elapsed.as_secs(),
-        elapsed.subsec_millis()
-    );
+    info!("verify took {}", now.elapsed().as_millis());
     info!("verified: {}", result.is_ok());
     result.map_err(|e| e.into())
 }
@@ -1657,13 +1645,7 @@ pub(crate) fn verify_aggr(
     let vk = load_vk::<KZGCommitmentScheme<Bn256>, Fr, AggregationCircuit>(vk_path, ())?;
     let now = Instant::now();
     let result = verify_proof_circuit_kzg(&params, proof, &vk, strategy);
-
-    let elapsed = now.elapsed();
-    info!(
-        "verify took {}.{}",
-        elapsed.as_secs(),
-        elapsed.subsec_millis()
-    );
+    info!("verify took {}", now.elapsed().as_millis());
     info!("verified: {}", result.is_ok());
     result?;
     Ok(())

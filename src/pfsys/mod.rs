@@ -254,14 +254,10 @@ where
     let now = Instant::now();
     trace!("preparing VK");
     let vk = keygen_vk(params, &empty_circuit)?;
-    let elapsed = now.elapsed();
-    info!("VK took {}.{}", elapsed.as_secs(), elapsed.subsec_millis());
-
-    // Initialize the proving key
+    info!("VK took {}", now.elapsed().as_millis());
     let now = Instant::now();
     let pk = keygen_pk(params, vk, &empty_circuit)?;
-    let elapsed = now.elapsed();
-    info!("PK took {}.{}", elapsed.as_secs(), elapsed.subsec_millis());
+    info!("PK took {}", now.elapsed().as_millis());
     Ok(pk)
 }
 

@@ -15,8 +15,8 @@ data
 *.code
 *.key
 *.params
-*.bytecode
-*.bin
+*.json
+*.onnx
 *~
 \#*\#
 .DS_Store
@@ -42,6 +42,10 @@ var/
 *.egg
 .vscode/
 *.whl
+<<<<<<< HEAD
 *.bak
 node_modules
 timingData.json
+=======
+logs/
+>>>>>>> 266abcc (added initial setup for tests)
