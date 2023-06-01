@@ -668,7 +668,7 @@ fn prove(
         }
     };
 
-    info!("proof took {}", now.elapsed().as_millis());
+    info!("proof took {}ms", now.elapsed().as_millis());
 
     snark.save(&proof_path)?;
 
@@ -1003,7 +1003,7 @@ fn aggregate(
             check_mode,
         )?;
 
-        info!("Aggregation proof took {}", now.elapsed().as_millis());
+        info!("Aggregation proof took {}ms", now.elapsed().as_millis());
         snark.save(&proof_path)?;
         save_vk::<KZGCommitmentScheme<Bn256>>(&vk_path, agg_pk.get_vk())?;
     }
@@ -1028,7 +1028,7 @@ fn verify(
         load_vk::<KZGCommitmentScheme<Bn256>, Fr, ModelCircuit<Fr>>(vk_path, model_circuit_params)?;
     let now = Instant::now();
     let result = verify_proof_circuit_kzg(params.verifier_params(), proof, &vk, strategy);
-    info!("verify took {}", now.elapsed().as_millis());
+    info!("verify took {}ms", now.elapsed().as_millis());
     info!("verified: {}", result.is_ok());
     Ok(())
 }
@@ -1047,7 +1047,7 @@ fn verify_aggr(
     let vk = load_vk::<KZGCommitmentScheme<Bn256>, Fr, AggregationCircuit>(vk_path, ())?;
     let now = Instant::now();
     let result = verify_proof_circuit_kzg(&params, proof, &vk, strategy);
-    info!("verify took {}", now.elapsed().as_millis());
+    info!("verify took {}ms", now.elapsed().as_millis());
     info!("verified: {}", result.is_ok());
     Ok(())
 }
