@@ -6,7 +6,7 @@ rm vk.key
 
 rm model.proof
 
-rm circuit params
+rm circuit.params
 
 rm network.onnx 
 

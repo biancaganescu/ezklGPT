@@ -1,22 +1,6 @@
 #! /usr/bin/bash
 
-cd S0K7
-
-sh run.sh
-
-sh delete.sh
-
-cd ..
-
 cd S0K8
-
-sh run.sh
-
-sh delete.sh
-
-cd ..
-
-cd S0K9
 
 sh run.sh
 
@@ -32,23 +16,7 @@ sh delete.sh
 
 cd ..
 
-cd S0K11
-
-sh run.sh
-
-sh delete.sh
-
-cd ..
-
 cd S0K12
-
-sh run.sh
-
-sh delete.sh
-
-cd ..
-
-cd S0K13
 
 sh run.sh
 
@@ -64,3 +32,50 @@ sh delete.sh
 
 cd ..
 
+cd S0K16
+
+sh run.sh
+
+sh delete.sh
+
+cd ..
+
+cd S0K18
+
+sh run.sh
+
+sh delete.sh
+
+cd ..
+
+cd S0K20
+
+sh run.sh
+
+sh delete.sh
+
+cd ..
+
+cd S0K22
+
+sh run.sh
+
+sh delete.sh
+
+cd ..
+
+cd S0K24
+
+sh run.sh
+
+sh delete.sh
+
+cd ..
+
+cd S0K26
+
+sh run.sh
+
+sh delete.sh
+
+cd ..
