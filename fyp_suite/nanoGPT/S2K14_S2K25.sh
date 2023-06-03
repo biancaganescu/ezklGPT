@@ -48,7 +48,7 @@ sh delete.sh
 
 cd ..
 
-cd S2K26
+cd S2K25
 
 sh run.sh
 
