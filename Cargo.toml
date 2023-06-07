@@ -80,51 +80,9 @@ runner = 'wasm-bindgen-test-runner'
 
 
 [[bench]]
-name = "accum_dot"
+name = "embd_attn1_einsum"
 harness = false
 
-
-[[bench]]
-name = "accum_sum"
-harness = false
-
-[[bench]]
-name = "pairwise_add"
-harness = false
-
-
-[[bench]]
-name = "pairwise_pow"
-harness = false
-
-
-[[bench]]
-name = "accum_pack"
-harness = false
-
-
-[[bench]]
-name = "accum_einsum_matmul"
-harness = false
-
-
-[[bench]]
-name = "accum_conv"
-harness = false
-
-
-[[bench]]
-name = "accum_sumpool"
-harness = false
-
-
-[[bench]]
-name = "relu"
-harness = false
-
-[[bench]]
-name = "accum_matmul_relu"
-harness = false
 
 [[bin]]
 name = "ezkl"
