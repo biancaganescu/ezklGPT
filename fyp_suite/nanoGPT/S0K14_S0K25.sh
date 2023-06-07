@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-cd S1K14
+cd S0K14
 
 sh run.sh
 
@@ -8,7 +8,7 @@ sh delete.sh
 
 cd ..
 
-cd S1K16
+cd S0K16
 
 sh run.sh
 
@@ -16,7 +16,7 @@ sh delete.sh
 
 cd ..
 
-cd S1K18
+cd S0K18
 
 sh run.sh
 
@@ -24,7 +24,7 @@ sh delete.sh
 
 cd ..
 
-cd S1K20
+cd S0K20
 
 sh run.sh
 
@@ -32,7 +32,7 @@ sh delete.sh
 
 cd ..
 
-cd S1K22
+cd S0K22
 
 sh run.sh
 
@@ -40,7 +40,7 @@ sh delete.sh
 
 cd ..
 
-cd S1K24
+cd S0K24
 
 sh run.sh
 
@@ -48,7 +48,7 @@ sh delete.sh
 
 cd ..
 
-cd S1K25
+cd S0K25
 
 sh run.sh
 
