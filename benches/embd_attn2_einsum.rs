@@ -38,11 +38,11 @@ impl Circuit<Fr> for MyCircuit {
     fn configure(cs: &mut ConstraintSystem<Fr>) -> Self::Config {
         let len = unsafe { LEN };
         let nh = 4;
-        let a = VarTensor::new_advice(cs, K, 1 * nh * 64 * 64);
+        let a = VarTensor::new_advice(cs, K, 1 * nh * 64 * (len / nh));
 
-        let b = VarTensor::new_advice(cs, K, 1 * nh * 64 * 64);
+        let b = VarTensor::new_advice(cs, K, 1 * nh * 64 * (len / nh));
 
-        let output = VarTensor::new_advice(cs, K, 1 * nh * 64 * 64);
+        let output = VarTensor::new_advice(cs, K, 1 * nh * 64 * (len / nh));
 
         Self::Config::configure(cs, &[a, b], &output, CheckMode::UNSAFE, 0)
     }
@@ -73,19 +73,19 @@ impl Circuit<Fr> for MyCircuit {
 }
 
 fn runmatmul(c: &mut Criterion) {
-    let mut group = c.benchmark_group("embd_attn1_einsum");
+    let mut group = c.benchmark_group("embd_attn2_einsum");
     let params = gen_srs::<KZGCommitmentScheme<_>>(24);
     for &len in [64, 80, 96, 112, 128].iter() {
         unsafe {
             LEN = len;
         };
         let nh = 4;
-        let mut a = Tensor::from((0..1 * nh * 64 * (len/nh)).map(|_| Value::known(Fr::random(OsRng))));
-        a.reshape(&[1, nh, 64, (len/nh)]);
+        let mut a = Tensor::from((0..1 * nh * 64 * 64).map(|_| Value::known(Fr::random(OsRng))));
+        a.reshape(&[1, nh, 64, 64]);
 
         // parameters
-        let mut b = Tensor::from((0..1 * nh * (len/nh) * 64).map(|_| Value::known(Fr::random(OsRng))));
-        b.reshape(&[1, nh, (len/nh), 64]);
+        let mut b = Tensor::from((0..1 * nh * 64 * (len/nh)).map(|_| Value::known(Fr::random(OsRng))));
+        b.reshape(&[1, nh, 64, (len/nh)]);
 
         let circuit = MyCircuit {
             inputs: [ValTensor::from(a), ValTensor::from(b)],
