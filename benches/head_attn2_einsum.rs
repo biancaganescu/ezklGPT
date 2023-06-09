@@ -61,7 +61,7 @@ impl Circuit<Fr> for MyCircuit {
                         &self.inputs,
                         &mut 0,
                         Box::new(PolyOp::Einsum {
-                            equation: "abcd,abdc->abcc".to_string(),
+                            equation: "abcc,abcd->abcd".to_string(),
                         }),
                     )
                     .unwrap();
