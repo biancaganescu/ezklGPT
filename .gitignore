@@ -18,6 +18,7 @@ data
 *.json
 *.onnx
 *~
+removed.txt
 \#*\#
 .DS_Store
 *_forward.json

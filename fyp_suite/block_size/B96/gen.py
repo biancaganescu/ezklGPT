@@ -213,7 +213,7 @@ model.get_num_params()
 shape = [1, 96]
 x =  torch.randint(65, (1, 96))
 torch_out = model(x)
-
+print(torch_out)
 torch.onnx.export(model, x, "network.onnx",
                   export_params=True,        # store the trained parameter weights inside the model file
                   opset_version=10,          # the ONNX version to export the model to

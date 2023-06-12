@@ -40,11 +40,7 @@ jobs:
           toolchain: nightly-2023-06-27
           override: true
           components: rustfmt, clippy
-      - name: Bench embd attn1 einsum
-        run: cargo bench --verbose --bench embd_attn1_einsum
-      - name: Bench embd attn2 einsum
-        run: cargo bench --verbose --bench embd_attn2_einsum
-      - name: Bench head attn1 einsum
-        run: cargo bench --verbose --bench head_attn1_einsum
-      - name: Bench head attn2 einsum
-        run: cargo bench --verbose --bench head_attn2_einsum
+      - name: Bench block attn1 einsum
+        run: cargo bench --verbose --bench block_attn1_einsum
+      - name: Bench block attn2 einsum
+        run: cargo bench --verbose --bench block_attn2_einsum

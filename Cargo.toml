@@ -85,21 +85,14 @@ runner = 'wasm-bindgen-test-runner'
 
 
 [[bench]]
-name = "embd_attn1_einsum"
+name = "block_attn1_einsum"
 harness = false
 
 
 [[bench]]
-name = "embd_attn2_einsum"
+name = "block_attn2_einsum"
 harness = false
 
-[[bench]]
-name = "head_attn1_einsum"
-harness = false
-
-[[bench]]
-name = "head_attn2_einsum"
-harness = false
 
 [[bin]]
 name = "ezkl"
