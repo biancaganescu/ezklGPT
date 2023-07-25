@@ -1,0 +1,5 @@
+number of parameters: 0.20M
+============= Diagnostic Run torch.onnx.export version 2.0.1+cu117 =============
+verbose: False, log level: Level.ERROR
+======================= 0 NONE 0 NOTE 0 WARNING 0 ERROR ========================
+

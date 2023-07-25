@@ -1,0 +1,34 @@
+[*] [0ms, ezkl] - 
+ |  
+ |          ███████╗███████╗██╗  ██╗██╗
+ |          ██╔════╝╚══███╔╝██║ ██╔╝██║
+ |          █████╗    ███╔╝ █████╔╝ ██║
+ |          ██╔══╝   ███╔╝  ██╔═██╗ ██║
+ |          ███████╗███████╗██║  ██╗███████╗
+ |          ╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝
+ |  
+ |          -----------------------------------------------------------
+ |          Easy Zero Knowledge Linear Algebra.
+ |          -----------------------------------------------------------
+ |          
+ |          
+[*] [0ms, ezkl] - command: 
+ |   {
+ |    "command": {
+ |      "Verify": {
+ |        "circuit_params_path": "circuit.params",
+ |        "params_path": "../../kzg20.params",
+ |        "proof_path": "model.proof",
+ |        "vk_path": "vk.key"
+ |      }
+ |    }
+ |  }
+[*] [0ms, ezkl_lib::pfsys] - loading params from "../../kzg20.params"
+[*] [116ms, ezkl_lib::execute] - downsizing params to 20 logrows
+[*] [147ms, ezkl_lib::pfsys] - loading verification key from "vk.key"
+[*] [147ms, ezkl_lib::graph::model] - configuring model
+[D] [148ms, ezkl_lib::circuit] - assigning lookup input
+[D] [148ms, ezkl_lib::circuit] - assigning lookup output
+[*] [5890ms, ezkl_lib::execute] - verify took 29ms
+[*] [5890ms, ezkl_lib::execute] - verified: true
+[*] [5907ms, ezkl] - succeeded
