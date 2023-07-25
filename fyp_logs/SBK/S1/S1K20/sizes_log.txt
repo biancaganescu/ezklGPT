@@ -1,0 +1,14 @@
+total 51983624
+-rw-rw-r-- 1 bianca bianca         220 Jun  3 18:45 circuit.params
+-rw-rw-r-- 1 bianca bianca          74 Jun  3 17:03 cpu_usage.sh
+-rw-rw-r-- 1 bianca bianca         122 Jun  3 17:03 delete.sh
+-rw-rw-r-- 1 bianca bianca        8586 Jun  3 17:03 gen.py
+-rw-rw-r-- 1 bianca bianca       89438 Jun  3 18:30 input.json
+drwxrwxr-x 2 bianca bianca        4096 Jun  3 19:10 logs
+-rw-rw-r-- 1 bianca bianca      217740 Jun  3 19:10 model.proof
+-rw-rw-r-- 1 bianca bianca      899642 Jun  3 18:30 network.onnx
+-rw-rw-r-- 1 bianca bianca       16980 Jun  3 18:30 output.json
+-rw-rw-r-- 1 bianca bianca 53190086132 Jun  3 18:45 pk.key
+-rw-rw-r-- 1 bianca bianca         240 Jun  3 17:03 ram_usage.sh
+-rw-rw-r-- 1 bianca bianca         904 Jun  3 17:03 run.sh
+-rw-rw-r-- 1 bianca bianca    39862664 Jun  3 18:45 vk.key

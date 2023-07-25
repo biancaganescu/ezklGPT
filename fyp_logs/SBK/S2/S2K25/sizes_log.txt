@@ -1,0 +1,10 @@
+total 1020
+-rw-rw-r-- 1 bianca bianca     74 Jun  3 17:03 cpu_usage.sh
+-rw-rw-r-- 1 bianca bianca    122 Jun  3 17:03 delete.sh
+-rw-rw-r-- 1 bianca bianca   8586 Jun  3 17:03 gen.py
+-rw-rw-r-- 1 bianca bianca  89499 Jun  4 05:11 input.json
+drwxrwxr-x 2 bianca bianca   4096 Jun  4 06:01 logs
+-rw-rw-r-- 1 bianca bianca 899642 Jun  4 05:11 network.onnx
+-rw-rw-r-- 1 bianca bianca  16978 Jun  4 05:11 output.json
+-rw-rw-r-- 1 bianca bianca    240 Jun  3 17:03 ram_usage.sh
+-rw-rw-r-- 1 bianca bianca    904 Jun  3 17:03 run.sh
