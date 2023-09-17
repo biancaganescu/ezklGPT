@@ -43,10 +43,6 @@ var/
 *.egg
 .vscode/
 *.whl
-<<<<<<< HEAD
 *.bak
 node_modules
 timingData.json
-=======
-logs/
->>>>>>> 266abcc (added initial setup for tests)

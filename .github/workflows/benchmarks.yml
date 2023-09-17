@@ -15,31 +15,6 @@ jobs:
           toolchain: nightly-2023-06-27
           override: true
           components: rustfmt, clippy
-      - name: Bench elgamal
-        run: cargo bench --verbose --bench elgamal
-
-  bench_poseidon:
-    runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: nightly-2023-06-27
-          override: true
-          components: rustfmt, clippy
-      - name: Bench poseidon
-        run: cargo bench --verbose --bench poseidon
-
-  bench_einsum_accum_matmul:
-    runs-on: self-hosted
-    needs: [bench_poseidon]
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: nightly-2023-06-27
-          override: true
-          components: rustfmt, clippy
       - name: Bench block attn1 einsum
         run: cargo bench --verbose --bench block_attn1_einsum
       - name: Bench block attn2 einsum
