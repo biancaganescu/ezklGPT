@@ -1,0 +1,34 @@
+[*] [0ms, ezkl] - 
+ |  
+ |          ███████╗███████╗██╗  ██╗██╗
+ |          ██╔════╝╚══███╔╝██║ ██╔╝██║
+ |          █████╗    ███╔╝ █████╔╝ ██║
+ |          ██╔══╝   ███╔╝  ██╔═██╗ ██║
+ |          ███████╗███████╗██║  ██╗███████╗
+ |          ╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝
+ |  
+ |          -----------------------------------------------------------
+ |          Easy Zero Knowledge for the Lyrical.
+ |          -----------------------------------------------------------
+ |          
+ |          
+[*] [0ms, ezkl] - command: 
+ |   {
+ |    "command": {
+ |      "Verify": {
+ |        "circuit_params_path": "circuit.params",
+ |        "params_path": "../../kzg22.params",
+ |        "proof_path": "model.proof",
+ |        "vk_path": "vk.key"
+ |      }
+ |    }
+ |  }
+[*] [0ms, ezkl_lib::pfsys] - loading params from "../../kzg22.params"
+[*] [448ms, ezkl_lib::execute] - downsizing params to 22 logrows
+[*] [478ms, ezkl_lib::pfsys] - loading verification key from "vk.key"
+[*] [478ms, ezkl_lib::graph::model] - configuring model
+[D] [479ms, ezkl_lib::circuit] - assigning lookup input
+[D] [479ms, ezkl_lib::circuit] - assigning lookup output
+[*] [2525ms, ezkl_lib::execute] - verify took 17ms
+[*] [2525ms, ezkl_lib::execute] - verified: true
+[*] [2552ms, ezkl] - succeeded
